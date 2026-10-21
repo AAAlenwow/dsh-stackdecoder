@@ -1,0 +1,35 @@
+{
+  "name": "dsh-stackdecoder",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AAAlenwow/dsh-stackdecoder.git"
+  },
+  "description": "Stack-trace decoder for DSH: parse Java/JS/Python stack traces into file:line frames and attach local code context. 1 tool, zero npm dependencies.",
+  "keywords": ["deepseek-harness","dsh","dsh-plugin","stack-trace","exception","debugging"],
+  "license": "MIT",
+  "type": "module",
+  "main": "./lib/host.js",
+  "exports": {
+    ".": "./lib/host.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "cordis.patch.yml",
+    "lib",
+    "tests",
+    "README.md",
+    "REPORT.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "compatibility": {
+      "dsh": ">=0.1.7-alpha.1",
+      "profiles": [
+        "web"
+      ]
+    }
+  }
+}
